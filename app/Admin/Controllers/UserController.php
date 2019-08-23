@@ -2,11 +2,12 @@
 
 namespace App\Admin\Controllers;
 
-use App\User;
+use App\Models\User;
 use Encore\Admin\Controllers\AdminController;
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Show;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends AdminController
 {
@@ -15,7 +16,7 @@ class UserController extends AdminController
      *
      * @var string
      */
-    protected $title = 'App\User';
+    protected $title = '用户';
 
     /**
      * Make a grid builder.
@@ -29,9 +30,6 @@ class UserController extends AdminController
         $grid->column('id', __('Id'));
         $grid->column('name', __('Name'));
         $grid->column('email', __('Email'));
-        $grid->column('email_verified_at', __('Email verified at'));
-        $grid->column('password', __('Password'));
-        $grid->column('remember_token', __('Remember token'));
         $grid->column('created_at', __('Created at'));
         $grid->column('updated_at', __('Updated at'));
 
@@ -71,10 +69,11 @@ class UserController extends AdminController
 
         $form->text('name', __('Name'));
         $form->email('email', __('Email'));
-        $form->datetime('email_verified_at', __('Email verified at'))->default(date('Y-m-d H:i:s'));
         $form->password('password', __('Password'));
-        $form->text('remember_token', __('Remember token'));
-
+        $form->saving(function (Form $form) {
+            $form->password=Hash::make($form->password);
+        });
+        $form->datetime('email_verified_at', __('Email verified at'))->default(date('Y-m-d H:i:s'));
         return $form;
     }
 }

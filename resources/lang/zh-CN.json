@@ -22,5 +22,8 @@
   "Roles": "角色",
   "Permission": "权限",
   "Menu": "菜单",
-  "Operation log": "操作日志"
+  "Operation log": "操作日志",
+  "Created at": "创建时间",
+  "Updated at": "更新时间",
+  "Email verified at": "验证时间"
 }

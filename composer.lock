@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "baaac3aba61acc199316157892ea22dc",
+    "content-hash": "5bcde430b8c04f4941b3aeec007ffccb",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -847,63 +847,6 @@
             "time": "2018-09-29T18:48:56+00:00"
         },
         {
-            "name": "laravel-admin-ext/lock-screen",
-            "version": "v1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/laravel-admin-extensions/lock-screen.git",
-                "reference": "847b40fe32c9248b18d60b015860c2530232097d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/laravel-admin-extensions/lock-screen/zipball/847b40fe32c9248b18d60b015860c2530232097d",
-                "reference": "847b40fe32c9248b18d60b015860c2530232097d",
-                "shasum": "",
-                "mirrors": [
-                    {
-                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
-                        "preferred": true
-                    }
-                ]
-            },
-            "require": {
-                "encore/laravel-admin": "~1.6",
-                "php": ">=7.0.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~6.0"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Encore\\Admin\\LockScreen\\LockScreenServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Encore\\Admin\\LockScreen\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "z-song"
-                }
-            ],
-            "description": "description...",
-            "homepage": "https://github.com/laravel-admin-ext/lock-screen",
-            "keywords": [
-                "extension",
-                "laravel-admin"
-            ],
-            "time": "2018-11-14T15:28:44+00:00"
-        },
-        {
             "name": "laravel/framework",
             "version": "v5.8.33",
             "source": {
@@ -1495,6 +1438,71 @@
                 "serialize"
             ],
             "time": "2019-07-09T21:58:11+00:00"
+        },
+        {
+            "name": "orangehill/iseed",
+            "version": "v2.6.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/orangehill/iseed.git",
+                "reference": "360ba1314e1dc950438bbb8006fc220de47dca00"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/orangehill/iseed/zipball/360ba1314e1dc950438bbb8006fc220de47dca00",
+                "reference": "360ba1314e1dc950438bbb8006fc220de47dca00",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "illuminate/support": "^5.3.8",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "illuminate/filesystem": "5.x",
+                "laravel/framework": "^5.3.8",
+                "mockery/mockery": "dev-master",
+                "phpunit/phpunit": "^5.7"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Orangehill\\Iseed\\IseedServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Orangehill\\Iseed": "src/"
+                },
+                "classmap": [
+                    "src/Orangehill/Iseed/Exceptions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-2-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Tihomir Opacic",
+                    "email": "tihomir.opacic@orangehilldev.com"
+                }
+            ],
+            "description": "Generate a new Laravel database seed file based on data from the existing database table.",
+            "keywords": [
+                "artisan",
+                "generators",
+                "laravel",
+                "seed"
+            ],
+            "time": "2018-12-07T08:06:29+00:00"
         },
         {
             "name": "paragonie/random_compat",
